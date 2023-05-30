@@ -1,0 +1,11 @@
+{% load static %}
+
+<h1>ConnectProly</h1>
+
+{% if request.user.is_authenticated %}
+<a href="{% url 'account_logout' %}">Log Out</a>
+{% else %}
+<a href="{% url 'account_login' %}">Login</a>
+{% endif %}
+
+
